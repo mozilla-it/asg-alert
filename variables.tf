@@ -1,8 +1,11 @@
-variable "slack_webhook_url" {}
-variable "slack_channel" {}
+variable "slack_webhook_url" {
+}
+
+variable "slack_channel" {
+}
 
 variable "asgs" {
-  type        = "list"
+  type        = list(string)
   description = "AWS ASGs to monitor"
 }
 
@@ -13,3 +16,4 @@ variable "slack_username" {
 variable "minimum_instances" {
   default = "0"
 }
+
